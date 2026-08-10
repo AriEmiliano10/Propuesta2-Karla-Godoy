@@ -373,13 +373,12 @@ class KarlaApp {
 
             <div class="lg:col-span-7 space-y-8 text-left">
               <div class="space-y-4">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#916066]/10 text-[#4f0911] text-xs font-sans font-semibold tracking-wider">
-                  <i data-lucide="heart" class="w-3.5 h-3.5 fill-current"></i> Nutrición Clínica de Precisión
-                </span>
                 <h1 class="font-serif text-5xl sm:text-6xl lg:text-[70px] font-bold text-[#4f0911] leading-[1.1] tracking-tight">
-                  Transforma tu salud<br class="hidden sm:block"/>
-                  <span class="italic font-normal text-[#713132] font-serif">desde la raíz.</span>
+                  Nutrición Clínica<br/>de Precisión
                 </h1>
+                <p class="font-serif text-2xl sm:text-3xl font-semibold text-[#713132] leading-snug">
+                  Para transformar tu salud desde la raíz.
+                </p>
               </div>
 
               <div class="space-y-3">
@@ -454,43 +453,63 @@ class KarlaApp {
 
   renderAchievementsSection() {
     const logros = [
-      { icon: 'trending-down', text: 'Mejora tu composición corporal' },
-      { icon: 'flame',         text: 'Reduce inflamación' },
-      { icon: 'dumbbell',      text: 'Conserva y aumenta masa muscular' },
-      { icon: 'activity',      text: 'Equilibra tu salud hormonal' },
-      { icon: 'zap',           text: 'Optimiza tu salud metabólica' },
-      { icon: 'sun',           text: 'Recupera tu energía' },
-      { icon: 'heart',         text: 'Favorece tu fertilidad y prepárate para un embarazo saludable' },
-      { icon: 'trophy',        text: 'Mejora tu rendimiento deportivo' },
-      { icon: 'smile',         text: 'Aprende a disfrutar de este estilo de vida y a comer sin restricciones' },
+      { icon: 'trending-down', text: 'Mejora tu composición corporal',        color: '#916066' },
+      { icon: 'flame',         text: 'Reduce inflamación',                    color: '#C5A059' },
+      { icon: 'dumbbell',      text: 'Conserva y aumenta masa muscular',      color: '#916066' },
+      { icon: 'activity',      text: 'Equilibra tu salud hormonal',           color: '#C5A059' },
+      { icon: 'zap',           text: 'Optimiza tu salud metabólica',          color: '#916066' },
+      { icon: 'sun',           text: 'Recupera tu energía',                   color: '#C5A059' },
+      { icon: 'heart',         text: 'Favorece tu fertilidad y prepárate para un embarazo saludable', color: '#916066' },
+      { icon: 'trophy',        text: 'Mejora tu rendimiento deportivo',       color: '#C5A059' },
+      { icon: 'smile',         text: 'Aprende a comer sin restricciones',     color: '#916066' },
     ];
 
     return `
-      <section class="py-16 bg-[#2D2A26]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12 space-y-3">
-            <span class="font-serif italic text-xl text-[#C5A059] tracking-tight block">En 5 segundos</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight">¿Qué puedes lograr conmigo?</h2>
+      <section class="py-20 bg-[#2D2A26] relative overflow-hidden">
+
+        <!-- Fondo decorativo -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-[#4f0911]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#916066]/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+          <!-- Header -->
+          <div class="text-center mb-16 space-y-4">
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white tracking-tight">
+              ¿Qué puedes lograr <span class="italic font-normal text-[#C5A059]">conmigo?</span>
+            </h2>
+            <div class="w-16 h-0.5 bg-[#916066] mx-auto"></div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            ${logros.map(logro => `
-              <div class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-5 py-4 hover:bg-white/10 transition-all duration-200">
-                <div class="w-10 h-10 rounded-xl bg-[#4f0911]/60 border border-[#916066]/30 flex items-center justify-center shrink-0">
-                  <i data-lucide="${logro.icon}" class="w-5 h-5 text-[#C5A059]"></i>
+          <!-- Grid de logros -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            ${logros.map((logro, i) => `
+              <div class="group relative bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 hover:border-[#916066]/40 transition-all duration-300">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border" style="background-color: ${logro.color}20; border-color: ${logro.color}40;">
+                    <i data-lucide="${logro.icon}" class="w-5 h-5" style="color: ${logro.color}"></i>
+                  </div>
+                  <p class="font-sans text-sm text-white/85 font-light leading-relaxed pt-2.5">${logro.text}</p>
                 </div>
-                <p class="font-sans text-sm text-white/90 font-light leading-snug">${logro.text}</p>
+                <!-- Línea decorativa inferior -->
+                <div class="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#916066]/30 to-transparent"></div>
               </div>
             `).join('')}
           </div>
 
-          <div class="mt-10 text-center space-y-2">
-            <p class="font-serif text-xl sm:text-2xl font-bold text-white">No transformo únicamente tu físico.</p>
-            <p class="font-sans text-sm text-white/70 font-light">
-              Transformo la manera en la que entiendes y cuidas tu cuerpo.<br/>
-              <span class="text-[#C5A059] font-medium">Porque cuando entiendes lo que tu cuerpo necesita, los resultados dejan de depender de la fuerza de voluntad.</span>
+          <!-- Cierre -->
+          <div class="mt-16 max-w-2xl mx-auto text-center space-y-3 border-t border-white/10 pt-12">
+            <p class="font-serif text-2xl sm:text-3xl font-bold text-white leading-snug">
+              No transformo únicamente tu físico.
+            </p>
+            <p class="font-sans text-sm text-white/65 font-light leading-relaxed">
+              Transformo la manera en la que entiendes y cuidas tu cuerpo.
+            </p>
+            <p class="font-serif italic text-[#C5A059] text-lg">
+              "Cuando entiendes lo que tu cuerpo necesita, los resultados dejan de depender de la fuerza de voluntad."
             </p>
           </div>
+
         </div>
       </section>
     `;
