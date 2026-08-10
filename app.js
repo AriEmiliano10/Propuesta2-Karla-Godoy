@@ -5,7 +5,7 @@ class KarlaApp {
       preselectedPlan: null,
       preselectedModality: 'online',
       previewEbook: null,
-      showBrandBanner: true,
+      showBrandBanner: false,
       mobileMenuOpen: false,
       activeBrandTab: 'palette',
       activeModality: 'online',
@@ -191,9 +191,6 @@ class KarlaApp {
             </nav>
 
             <div class="hidden md:flex items-center gap-4">
-              <button id="toggle-brand-banner" class="text-xs text-[#916066] hover:text-[#4f0911] font-sans font-bold flex items-center gap-1.5 transition-colors">
-                <i data-lucide="sparkles" class="w-4 h-4"></i> Propuesta de Marca
-              </button>
               <button id="nav-booking-btn" class="px-6 py-3 rounded-full bg-[#4f0911] hover:bg-[#713132] text-[#FAF9F6] font-sans text-xs uppercase tracking-widest font-bold transition-all shadow-md">
                 Agendar Cita
               </button>
@@ -210,10 +207,7 @@ class KarlaApp {
           <a href="#sobre-mi"  class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">Sobre Karla</a>
           <a href="#consultas" class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">Consultas</a>
           <a href="#ebooks"    class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">E-Books</a>
-          <div class="pt-2 border-t border-[#d0bdac]/30 flex flex-col gap-2">
-            <button id="mobile-toggle-brand-banner" class="w-full text-center py-2.5 text-xs text-[#916066] font-bold font-sans flex items-center justify-center gap-1.5 rounded-xl hover:bg-[#916066]/10">
-              <i data-lucide="sparkles" class="w-4 h-4"></i> Propuesta de Marca
-            </button>
+          <div class="pt-2 border-t border-[#d0bdac]/30">
             <button id="mobile-booking-btn" class="w-full text-center py-3 bg-[#4f0911] text-[#FAF9F6] text-xs font-bold uppercase tracking-widest rounded-full shadow-md">
               Agendar Cita
             </button>
