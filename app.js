@@ -17,12 +17,21 @@ class KarlaApp {
   }
 
   get currentPage() {
-    return document.body.dataset.page || 'home';
+    const hash = window.location.hash;
+    if (hash === '#sobre-mi') return 'sobre-mi';
+    if (hash === '#consultas') return 'consultas';
+    if (hash === '#ebooks') return 'ebooks';
+    return 'home';
   }
 
   init() {
     this.render();
     this.setupScrollListener();
+    window.addEventListener('hashchange', () => {
+      this.state.mobileMenuOpen = false;
+      this.render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   setupScrollListener() {
@@ -175,10 +184,10 @@ class KarlaApp {
             </a>
 
             <nav class="hidden md:flex items-center gap-8">
-              <a href="./index.html"      class="${linkClass(isHome)}">Inicio</a>
-              <a href="./sobre-mi.html"   class="${linkClass(isSobreMi)}">Sobre Karla</a>
-              <a href="./consultas.html"  class="${linkClass(isConsultas)}">Consultas</a>
-              <a href="./ebooks.html"     class="${linkClass(isEbooks)}">E-Books</a>
+              <a href="#"           class="${linkClass(isHome)}">Inicio</a>
+              <a href="#sobre-mi"   class="${linkClass(isSobreMi)}">Sobre Karla</a>
+              <a href="#consultas"  class="${linkClass(isConsultas)}">Consultas</a>
+              <a href="#ebooks"     class="${linkClass(isEbooks)}">E-Books</a>
             </nav>
 
             <div class="hidden md:flex items-center gap-4">
@@ -197,10 +206,10 @@ class KarlaApp {
         </div>
 
         <div class="${this.state.mobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-[#FAF9F6] border-b border-[#d0bdac]/40 p-4 space-y-3 shadow-lg absolute w-full left-0 top-full">
-          <a href="./index.html"     class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">Inicio</a>
-          <a href="./sobre-mi.html"  class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">Sobre Karla</a>
-          <a href="./consultas.html" class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">Consultas</a>
-          <a href="./ebooks.html"    class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">E-Books</a>
+          <a href="#"          class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">Inicio</a>
+          <a href="#sobre-mi"  class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">Sobre Karla</a>
+          <a href="#consultas" class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">Consultas</a>
+          <a href="#ebooks"    class="mobile-nav-link block px-4 py-2 rounded-xl text-sm font-sans font-medium text-[#2c2421] hover:bg-[#916066]/10 hover:text-[#4f0911]">E-Books</a>
           <div class="pt-2 border-t border-[#d0bdac]/30 flex flex-col gap-2">
             <button id="mobile-toggle-brand-banner" class="w-full text-center py-2.5 text-xs text-[#916066] font-bold font-sans flex items-center justify-center gap-1.5 rounded-xl hover:bg-[#916066]/10">
               <i data-lucide="sparkles" class="w-4 h-4"></i> Propuesta de Marca
@@ -299,10 +308,10 @@ class KarlaApp {
             <div class="md:col-span-3 space-y-4">
               <h5 class="font-sans text-[10px] text-[#C5A059] uppercase tracking-widest font-bold">Navegación</h5>
               <div class="flex flex-col gap-2 font-sans text-xs text-white/70 font-light">
-                <a href="./index.html"     class="hover:text-white transition-colors">Inicio</a>
-                <a href="./sobre-mi.html"  class="hover:text-white transition-colors">Sobre Karla</a>
-                <a href="./consultas.html" class="hover:text-white transition-colors">Consultas & Paquetes</a>
-                <a href="./ebooks.html"    class="hover:text-white transition-colors">E-Books Digitales</a>
+                <a href="#"          class="hover:text-white transition-colors">Inicio</a>
+                <a href="#sobre-mi"  class="hover:text-white transition-colors">Sobre Karla</a>
+                <a href="#consultas" class="hover:text-white transition-colors">Consultas & Paquetes</a>
+                <a href="#ebooks"    class="hover:text-white transition-colors">E-Books Digitales</a>
               </div>
             </div>
 
@@ -393,7 +402,7 @@ class KarlaApp {
                 <button id="hero-booking-btn" class="px-8 py-4 bg-[#4f0911] hover:bg-[#713132] text-[#FAF9F6] font-sans text-xs uppercase tracking-widest font-bold rounded-full shadow-lg hover:shadow-xl transition-all flex items-center gap-2">
                   Agendar Cita <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </button>
-                <a href="./consultas.html" class="px-8 py-4 border border-[#d0bdac] hover:bg-[#d0bdac]/10 text-[#4f0911] font-sans text-xs uppercase tracking-widest font-bold rounded-full transition-all">
+                <a href="#consultas" class="px-8 py-4 border border-[#d0bdac] hover:bg-[#d0bdac]/10 text-[#4f0911] font-sans text-xs uppercase tracking-widest font-bold rounded-full transition-all">
                   Ver Paquetes
                 </a>
               </div>
