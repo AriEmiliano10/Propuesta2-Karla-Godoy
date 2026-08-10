@@ -373,12 +373,10 @@ class KarlaApp {
 
             <div class="lg:col-span-7 space-y-8 text-left">
               <div class="space-y-4">
-                <h1 class="font-serif text-5xl sm:text-6xl lg:text-[70px] font-bold text-[#4f0911] leading-[1.1] tracking-tight">
-                  Nutrición Clínica<br/>de Precisión
+                <h1 class="font-serif leading-[1.1] tracking-tight">
+                  <span class="block text-5xl sm:text-6xl lg:text-[70px] font-bold text-[#4f0911]">Nutrición Clínica<br/>de Precisión</span>
+                  <span class="block text-3xl sm:text-4xl lg:text-5xl font-normal text-[#916066]/70 mt-2">Para transformar tu salud desde la raíz.</span>
                 </h1>
-                <p class="font-serif text-2xl sm:text-3xl font-semibold text-[#713132] leading-snug">
-                  Para transformar tu salud desde la raíz.
-                </p>
               </div>
 
               <div class="space-y-3">
