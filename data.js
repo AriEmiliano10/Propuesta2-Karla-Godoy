@@ -118,56 +118,59 @@ const EBOOKS_DATA = [
 
 const SERVICE_PLANS = [
   {
-    id: 'consulta-inicial',
-    title: 'Consulta Nutricional Inicial',
-    subtitle: 'Evaluación Clínica & Diagnóstico Personalizado',
-    modality: 'hibrido',
-    duration: '60 Minutos',
-    price: 65,
-    currency: 'USD',
-    recommendedFor: 'Ideal para iniciar tu camino hacia un estilo de vida saludable con bases sólidas.',
+    id: 'consulta-wellness',
+    title: 'Consulta Wellness Integral',
+    subtitle: 'Evaluación Clínica Completa & Estrategia Personalizada',
+    modality: 'presencial',
+    duration: 'Pagos Mensuales',
+    price: 1800,
+    currency: 'MXN',
+    recommendedFor: 'Ideal para quien quiere empezar a entender lo que su cuerpo necesita con acompañamiento continuo.',
     features: [
-      'Evaluación del historial clínico, metabólico y hábitos de vida.',
-      'Análisis de composición corporal (InBody / Pliegues en presencial o mediciones guiadas en online).',
-      'Plan de alimentación 100% personalizado adaptado a tus gustos y rutina.',
-      'Guía de lectura de etiquetas nutricionales y lista de supermercado.',
-      'Recomendación de suplementación clínica personalizada.'
+      'Valoración completa e historia clínica.',
+      'Estudio de composición corporal INBODY.',
+      'Estrategia nutricional personalizada.',
+      'Guía de suplementación personalizada.',
+      'Recomendación de movimiento adaptada a tu estilo de vida.',
+      'Ajustes continuos según tus avances.',
+      'Seguimiento entre sesiones 1:1 por WhatsApp.'
     ]
   },
   {
-    id: 'plan-transformacion-3m',
-    title: 'Programa Transformación (3 Meses)',
-    subtitle: 'Acompañamiento Continuo & Reeducación Alimentaria',
-    modality: 'hibrido',
-    duration: '3 Meses (6 Citas)',
-    price: 160,
-    currency: 'USD',
+    id: 'transformacion-90',
+    title: 'Programa Transformación 90 Días',
+    subtitle: 'Acompañamiento Presencial Intensivo & Resultados Reales',
+    modality: 'presencial',
+    duration: '3 Consultas Presenciales',
+    price: 3200,
+    currency: 'MXN',
     popular: true,
-    recommendedFor: 'El programa preferido para lograr cambios sostenibles en composición corporal y salud hormonal.',
+    savings: 'Ahorras $400 MXN',
+    recommendedFor: 'El programa más completo para transformar tu composición corporal y salud hormonal en 90 días.',
     features: [
-      'Consulta Inicial Completa de 60 minutos.',
-      '5 Consultas de seguimiento quincenales para evaluación de avances.',
-      'Ajustes continuos al menú según progresos y cambios de rutina.',
-      'Soporte directo y personalizado vía WhatsApp de Lunes a Viernes.',
-      'Guías adicionales de recetas, snacks, comer fuera de casa y manejo del estrés.',
-      'Descuentos exclusivos en talleres presenciales o nuevos e-books.'
+      '3 consultas completas presenciales.',
+      'Seguimiento quincenal por videollamada.',
+      'Ajustes continuos a tu estrategia nutricional.',
+      'Seguimiento entre sesiones 1:1 por WhatsApp.'
     ]
   },
   {
-    id: 'nutricion-genetica',
-    title: 'Nutrición de Precisión + Genética',
-    subtitle: 'El Plan más Avanzado y Científico',
-    modality: 'hibrido',
-    duration: '6 Citas + Reporte de ADN',
-    price: 290,
-    currency: 'USD',
-    recommendedFor: 'Para personas que quieren optimizar su salud con la máxima precisión científica disponible.',
+    id: 'online-premium',
+    title: 'Consulta Wellness Integral Online Premium',
+    subtitle: 'La Misma Experiencia Clínica — Desde Cualquier Parte del Mundo',
+    modality: 'online',
+    duration: 'Atención Internacional',
+    price: 1800,
+    currency: 'MXN',
+    recommendedFor: 'Para quienes buscan atención clínica de alto nivel sin importar dónde se encuentren.',
     features: [
-      'Análisis e interpretación de tu examen nutrigenético o bioquímico de laboratorio.',
-      'Plan nutricional ajustado a tus variantes genéticas de absorción y metabolismo.',
-      'Ciclado de carbohidratos y crononutrición avanzada.',
-      'Suplementación ortomolecular basada en necesidades de tus genes.',
-      '6 sesiones de seguimiento (presencial u online) para perfeccionar hábitos.'
+      'Videollamada HD.',
+      'Historia clínica y revisión de laboratorios.',
+      'Estrategia nutricional personalizada.',
+      'Guía de suplementación personalizada.',
+      'Recomendación de movimiento adaptada a tu estilo de vida.',
+      'Ajustes continuos.',
+      'Atención internacional 1:1 por WhatsApp.'
     ]
   }
 ];
