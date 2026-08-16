@@ -1,15 +1,7 @@
-// docs/data.js
+// src/js/data.js
 // Todos los datos dinámicos de la aplicación Karla Godoy, listos para producción local o GitHub Pages.
 
-const BRAND_COLORS = [
-  { name: 'Vinotinto Profundo', hex: '#4f0911', rgb: 'RGB: 79 9 17', usage: 'Color Primario Marca & Títulos' },
-  { name: 'Vinotinto Elegante', hex: '#713132', rgb: 'RGB: 113 49 50', usage: 'Fondos Secundarios & Botones' },
-  { name: 'Rosa Palo Silvestre', hex: '#916066', rgb: 'RGB: 145 96 102', usage: 'Acentos, Tarjetas & Badges' },
-  { name: 'Terracota Cálido', hex: '#856654', rgb: 'RGB: 133 102 84', usage: 'Detalles Terrosos & Tipografía' },
-  { name: 'Nude Arena', hex: '#d0bdac', rgb: 'RGB: 208 189 172', usage: 'Fondos Suaves & Bordes' },
-];
-
-const EBOOKS_DATA = [
+export const EBOOKS_DATA = [
   {
     id: 'food-is-medicine',
     title: 'Food is Medicine',
@@ -116,66 +108,63 @@ const EBOOKS_DATA = [
   }
 ];
 
-const SERVICE_PLANS = [
+export const SERVICE_PLANS = [
   {
-    id: 'consulta-wellness',
-    title: 'Consulta Wellness Integral',
-    subtitle: 'Evaluación Clínica Completa & Estrategia Personalizada',
-    modality: 'presencial',
-    duration: 'Pagos Mensuales',
-    price: 1800,
-    currency: 'MXN',
-    recommendedFor: 'Ideal para quien quiere empezar a entender lo que su cuerpo necesita con acompañamiento continuo.',
+    id: 'consulta-inicial',
+    title: 'Consulta Nutricional Inicial',
+    subtitle: 'Evaluación Clínica & Diagnóstico Personalizado',
+    modality: 'hibrido',
+    duration: '60 Minutos',
+    price: 65,
+    currency: 'USD',
+    recommendedFor: 'Ideal para iniciar con una valoración premium y una estrategia nutricional diseñada exclusivamente para ti.',
     features: [
-      'Valoración completa e historia clínica.',
-      'Estudio de composición corporal INBODY.',
-      'Estrategia nutricional personalizada.',
-      'Guía de suplementación personalizada.',
-      'Recomendación de movimiento adaptada a tu estilo de vida.',
-      'Ajustes continuos según tus avances.',
-      'Seguimiento entre sesiones 1:1 por WhatsApp.'
+      'Evaluación del historial clínico, metabólico y hábitos de vida.',
+      'Análisis de composición corporal (InBody / Pliegues en presencial o mediciones guiadas en online).',
+      'Plan de alimentación 100% personalizado adaptado a tus gustos y rutina.',
+      'Guía de lectura de etiquetas nutricionales y lista de supermercado.',
+      'Recomendación de suplementación clínica personalizada.'
     ]
   },
   {
-    id: 'transformacion-90',
-    title: 'Programa Transformación 90 Días',
-    subtitle: 'Acompañamiento Presencial Intensivo & Resultados Reales',
-    modality: 'presencial',
-    duration: '3 Consultas Presenciales',
-    price: 3200,
-    currency: 'MXN',
+    id: 'plan-transformacion-3m',
+    title: 'Programa Transformación (3 Meses)',
+    subtitle: 'Acompañamiento Continuo & Reeducación Alimentaria',
+    modality: 'hibrido',
+    duration: '3 Meses (6 Citas)',
+    price: 160,
+    currency: 'USD',
     popular: true,
-    savings: 'Ahorras $400 MXN',
-    recommendedFor: 'El programa más completo para transformar tu composición corporal y salud hormonal en 90 días.',
+    recommendedFor: 'El programa premium preferido para lograr cambios sostenibles en composición corporal, metabolismo y salud hormonal.',
     features: [
-      '3 consultas completas presenciales.',
-      'Seguimiento quincenal por videollamada.',
-      'Ajustes continuos a tu estrategia nutricional.',
-      'Seguimiento entre sesiones 1:1 por WhatsApp.'
+      'Consulta Inicial Completa de 60 minutos.',
+      '5 Consultas de seguimiento quincenales para evaluación de avances.',
+      'Ajustes continuos al menú según progresos y cambios de rutina.',
+      'Soporte directo y personalizado vía WhatsApp de Lunes a Viernes.',
+      'Guías adicionales de recetas, snacks, comer fuera de casa y manejo del estrés.',
+      'Descuentos exclusivos en talleres presenciales o nuevos e-books.'
     ]
   },
   {
-    id: 'online-premium',
-    title: 'Consulta Wellness Integral Online Premium',
-    subtitle: 'La Misma Experiencia Clínica — Desde Cualquier Parte del Mundo',
-    modality: 'online',
-    duration: 'Atención Internacional',
-    price: 1800,
-    currency: 'MXN',
-    recommendedFor: 'Para quienes buscan atención clínica de alto nivel sin importar dónde se encuentren.',
+    id: 'nutricion-genetica',
+    title: 'Nutrición de Precisión Premium + Genética',
+    subtitle: 'El Plan más Avanzado, Personalizado y Científico',
+    modality: 'hibrido',
+    duration: '6 Citas + Reporte de ADN',
+    price: 290,
+    currency: 'USD',
+    recommendedFor: 'Para personas que quieren optimizar su salud con máxima precisión científica a partir de genética, laboratorios e historia clínica completa.',
     features: [
-      'Videollamada HD.',
-      'Historia clínica y revisión de laboratorios.',
-      'Estrategia nutricional personalizada.',
-      'Guía de suplementación personalizada.',
-      'Recomendación de movimiento adaptada a tu estilo de vida.',
-      'Ajustes continuos.',
-      'Atención internacional 1:1 por WhatsApp.'
+      'Análisis e interpretación de tu examen nutrigenético o bioquímico de laboratorio.',
+      'Plan nutricional ajustado a tus variantes genéticas de absorción y metabolismo.',
+      'Ciclado de carbohidratos y crononutrición avanzada.',
+      'Suplementación ortomolecular basada en necesidades de tus genes.',
+      '6 sesiones de seguimiento (presencial u online) para perfeccionar hábitos.'
     ]
   }
 ];
 
-const TESTIMONIALS_DATA = [
+export const TESTIMONIALS_DATA = [
   {
     id: 'test-1',
     name: 'Mariana S.',
@@ -223,7 +212,7 @@ const TESTIMONIALS_DATA = [
   }
 ];
 
-const FAQ_ITEMS = [
+export const FAQ_ITEMS = [
   {
     q: '¿Cómo funciona la consulta online a diferencia de la presencial?',
     a: 'La consulta online se realiza mediante una videollamada segura. Recibes exactamente la misma asesoría detallada, diagnóstico clínico y plan de alimentación personalizado. El seguimiento antropométrico se realiza explicándote de manera amigable cómo tomar tus mediciones y peso en casa con accesorios sencillos.'
@@ -246,4 +235,4 @@ const FAQ_ITEMS = [
   }
 ];
 
-const WHATSAPP_NUMBER = '5215551234567';
+export const WHATSAPP_NUMBER = '5215551234567';

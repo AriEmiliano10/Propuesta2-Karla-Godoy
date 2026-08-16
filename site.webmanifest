@@ -1,0 +1,17 @@
+{
+  "name": "Karla Godoy Nutricion",
+  "short_name": "Karla Nutricion",
+  "lang": "es-MX",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f6",
+  "theme_color": "#4f0911",
+  "description": "Consulta nutricional clinica personalizada presencial y online.",
+  "icons": [
+    {
+      "src": "/assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

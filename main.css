@@ -1,0 +1,43 @@
+:root {
+  --kg-color-primary: #4f0911;
+  --kg-color-secondary: #713132;
+  --kg-color-accent: #916066;
+  --kg-color-earth: #856654;
+  --kg-color-nude: #d0bdac;
+  --kg-color-cream: #faf9f6;
+  --kg-focus-ring: 0 0 0 3px rgba(145, 96, 102, 0.15);
+  --kg-transition-fast: 0.2s ease-in-out;
+}
+
+/* Utilidades globales compartidas por toda la app. */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes base para formularios. */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+:where(select, input, textarea) {
+  background-color: #ffffff !important;
+  transition: all var(--kg-transition-fast);
+}
+
+:where(select, input, textarea):focus {
+  border-color: var(--kg-color-accent) !important;
+  box-shadow: var(--kg-focus-ring) !important;
+}

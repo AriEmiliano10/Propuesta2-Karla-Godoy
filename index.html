@@ -3,6 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nutrición clínica personalizada con Karla Godoy. Consulta presencial y online, planes de transformación, salud hormonal y programas digitales.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#4f0911">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://karlagodoynutricion.com/">
+  <link rel="manifest" href="./site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Karla Godoy Nutricion">
+  <meta property="og:title" content="Karla Godoy | Nutricion, Bienestar y Beauty">
+  <meta property="og:description" content="Atencion nutricional clinica con enfoque personalizado: consultas, seguimiento y programas digitales.">
+  <meta property="og:url" content="https://karlagodoynutricion.com/">
+  <meta property="og:image" content="https://karlagodoynutricion.com/assets/images/karla.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karla Godoy | Nutricion, Bienestar y Beauty">
+  <meta name="twitter:description" content="Nutricion clinica personalizada con consultas online y presenciales.">
+  <meta name="twitter:image" content="https://karlagodoynutricion.com/assets/images/karla.jpg">
+
+  <link rel="preload" href="./assets/images/karla.jpg" as="image" fetchpriority="high">
+  <link rel="preload" href="./assets/images/logo.svg" as="image" type="image/svg+xml">
   <title>Karla Godoy | Nutrición, Bienestar & Beauty</title>
   
   <!-- Tailwind CSS Play CDN -->
@@ -28,42 +50,136 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/main.css">
   
   <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 
-  <style>
-    /* Transiciones suaves de opacidad */
-    .animate-fade-in {
-      animation: fadeIn 0.3s ease-out forwards;
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Karla Godoy Nutricion",
+      "description": "Consulta nutricional clinica personalizada presencial y online.",
+      "url": "https://karlagodoynutricion.com/",
+      "email": "contacto@karlagodoynutricion.com",
+      "telephone": "+52 1 55 5123 4567",
+      "areaServed": "Mexico",
+      "image": "https://karlagodoynutricion.com/assets/images/karla.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Horacio 1500, Polanco",
+        "addressLocality": "Ciudad de Mexico",
+        "addressCountry": "MX"
+      },
+      "sameAs": [
+        "https://wa.me/5215551234567"
+      ]
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-    /* Estilos personalizados para los select e inputs del sistema */
-    select, input, textarea {
-      background-color: #ffffff !important;
-      transition: all 0.2s ease-in-out;
-    }
-    select:focus, input:focus, textarea:focus {
-      border-color: #916066 !important;
-      box-shadow: 0 0 0 3px rgba(145, 96, 102, 0.15) !important;
-    }
-  </style>
+  </script>
+
 </head>
 <body class="bg-[#FDFBF7] text-[#2C2421] antialiased selection:bg-[#916066]/20 selection:text-[#4f0911]">
   
   <!-- Contenedor general donde se inyectará dinámicamente toda la app de Karla Godoy -->
-  <div id="app-root" class="min-h-screen flex flex-col justify-between"></div>
+  <div id="app-root" class="min-h-screen flex flex-col justify-between">
+    <main class="max-w-4xl mx-auto px-4 py-12 text-left">
+      <h1 class="font-serif text-4xl text-[#4f0911]">Karla Godoy - Nutricion Clinica Personalizada</h1>
+      <p class="mt-4 font-sans text-sm text-[#713132]">Consulta nutricional presencial y online con enfoque clinico, planes de transformacion y seguimiento personalizado.</p>
+      <ul class="mt-6 space-y-2 font-sans text-sm text-[#2C2421]">
+        <li>Consulta inicial y programas de seguimiento.</li>
+        <li>Nutricion de precision para salud hormonal y bienestar metabolico.</li>
+        <li>Materiales digitales y recursos practicos para tu alimentacion diaria.</li>
+      </ul>
+    </main>
+  </div>
 
-  <!-- Scripts que cargan los datos y la lógica stática para Local / GitHub Pages sin CORS -->
-  <script src="./data.js"></script>
-  <script src="./app.js"></script>
+  <!-- Templates HTML reutilizables (fuera de JS) -->
+  <template id="tpl-footer">
+    <footer class="bg-[#2D2A26] text-[#FAF9F6] pt-16 pb-12 border-t border-[#d0bdac]/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 border-b border-white/10 pb-12 text-left">
+          <div class="md:col-span-5 space-y-4">
+            <img src="./assets/images/recurso-6.svg" alt="Recurso 6 Karla Godoy" loading="lazy" decoding="async" class="h-14 w-auto object-contain" />
+            <h5 class="font-sans text-[10px] text-[#C5A059] uppercase tracking-widest font-bold">Recursos</h5>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 font-sans text-xs text-white/70 font-light max-w-xl">
+              <a href="#agenda-cta" class="hover:text-white transition-colors">1. Agendar Valoración</a>
+              <a href="#e-books" class="hover:text-white transition-colors">2. Programas</a>
+              <a href="#testimonios" class="hover:text-white transition-colors">3. Testimonios</a>
+              <a href="#consultas" class="hover:text-white transition-colors">4. Consulta Inicial</a>
+              <a href="#consultas" class="hover:text-white transition-colors">5. Nutrición de Precisión</a>
+              <a href="#calculadora" class="hover:text-white transition-colors">6. Cómo Funciona</a>
+            </div>
+          </div>
+
+          <div class="md:col-span-3 space-y-4">
+            <h5 class="font-sans text-[10px] text-[#C5A059] uppercase tracking-widest font-bold">Navegación</h5>
+            <div class="flex flex-col gap-2 font-sans text-xs text-white/70 font-light">
+              <a href="#sobre-mi" class="hover:text-white transition-colors">Sobre Karla</a>
+              <a href="#consultas" class="hover:text-white transition-colors">Menú de Asesorías</a>
+              <a href="#e-books" class="hover:text-white transition-colors">Programas Digitales</a>
+              <a href="#calculadora" class="hover:text-white transition-colors">Cómo Funciona</a>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 space-y-4">
+            <h5 class="font-sans text-[10px] text-[#C5A059] uppercase tracking-widest font-bold">Horarios & Ubicación</h5>
+            <div class="space-y-2.5 font-sans text-xs text-white/70 font-light">
+              <p class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4 text-[#C5A059]"></i>
+                <span>Lunes a Viernes: 09:00 AM - 07:00 PM</span>
+              </p>
+              <p class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-[#C5A059]"></i>
+                <span>Av. Horacio 1500, Polanco, CDMX, México</span>
+              </p>
+              <p class="flex items-center gap-2">
+                <i data-lucide="mail" class="w-4 h-4 text-[#C5A059]"></i>
+                <span>contacto@karlagodoynutricion.com</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-[11px] text-white/40">
+          <p>© <span data-current-year></span> Karla Godoy · Nutrición & Bienestar. Todos los derechos reservados.</p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:underline">Aviso de Privacidad</a>
+            <a href="#" class="hover:underline">Términos y Condiciones</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </template>
+
+  <template id="tpl-whatsapp-widget">
+    <div class="fixed bottom-6 right-6 z-40 font-sans flex flex-col items-end gap-3 select-none">
+      <div id="whatsapp-info-panel" class="bg-white rounded-3xl shadow-2xl border border-[#d0bdac]/50 max-w-[280px] text-left overflow-hidden animate-fade-in hidden">
+        <div class="bg-[#4f0911] text-[#FAF9F6] p-4 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center font-bold text-sm">KG</div>
+          <div>
+            <p class="font-serif font-bold text-sm text-white">Karla Godoy</p>
+            <p class="text-[9px] text-white/60 leading-none">Nutrióloga certificada</p>
+          </div>
+        </div>
+        <div class="p-4 space-y-3 bg-[#FAF9F6]">
+          <p class="text-xs text-[#2C2421]/90 font-light leading-relaxed">
+            Hola, ¡bienvenido! ✨ Cuéntame en qué puedo ayudarte con tu salud y bienestar hoy.
+          </p>
+          <a data-whatsapp-chat-link target="_blank" class="w-full py-2 bg-[#25D366] text-white rounded-xl text-center text-xs font-bold font-sans tracking-wide block hover:bg-[#20ba5a] transition-all">
+            Iniciar Chat Directo
+          </a>
+        </div>
+      </div>
+
+      <button id="whatsapp-widget-toggle" class="w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center relative cursor-pointer">
+        <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
+        <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#4f0911] border-2 border-white animate-pulse"></span>
+      </button>
+    </div>
+  </template>
+
+  <!-- Entry point modular de la app -->
+  <script type="module" src="./src/js/app.js"></script>
 </body>
 </html>
